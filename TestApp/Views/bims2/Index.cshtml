@@ -1,0 +1,196 @@
+﻿@model IEnumerable<TestApp.Models.bims2>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lookup Tool</h2>
+<b>Fill in your keywords and hit "Search"</b>
+<br />
+@using (Html.BeginForm("Index", "bims2", FormMethod.Get))
+{
+    <p>Street Address</p>@Html.TextBox("StreetAddress")
+    <p>City, State, Zip Code</p>@Html.TextBox("CityState")
+    <input type="submit" value="Search" />
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<H3>List View</H3>
+@foreach (var item in Model)
+{
+<p>
+    <b>Statement Num: </b>
+    @Html.DisplayFor(modelItem => item.StatementNum)
+</p>
+<p>
+    <b>Statement Date: </b>
+    @Html.DisplayFor(modelItem => item.StatementDate)
+</p>
+<p>
+    <b>APN: </b>
+    @Html.DisplayFor(modelItem => item.APN)
+</p>
+<p>
+    <b>Property Address: </b>
+    @Html.DisplayFor(modelItem => item.Property_Address)
+</p>
+<p>
+    <b>Property_City_State_Zip: </b>
+    @Html.DisplayFor(modelItem => item.Property_City_State_Zip)
+</p>
+<p>
+    <b>RSO_Exemptions: </b>
+    @Html.DisplayFor(modelItem => item.RSO_Exemptions)
+</p>
+<p>
+    <b>IS_RSO: </b>
+    @Html.DisplayFor(modelItem => item.IS_RSO)
+</p>
+<p>
+    <b>IS_SCEP: </b>
+    @Html.DisplayFor(modelItem => item.IS_SCEP)
+</p>
+<p>
+    <b>RSO_Invoice_Num: </b>
+    @Html.DisplayFor(modelItem => item.RSO_Invoice_Num)
+</p>
+<p>
+    <b>SCEP_Invoice_Num: </b>
+    @Html.DisplayFor(modelItem => item.SCEP_Invoice_Num)
+</p>
+<p>
+    <b>Total_Units: </b>
+    @Html.DisplayFor(modelItem => item.Total_Units)
+</p>
+<p>
+    <b>RSO_Units_Billed: </b>
+    @Html.DisplayFor(modelItem => item.RSO_Units_Billed)
+</p>
+<p>
+    <b>SCEP_Units_Billed: </b>
+    @Html.DisplayFor(modelItem => item.SCEP_Units_Billed)
+</p>
+<p>
+    <b>is_active: </b>
+    @Html.DisplayFor(modelItem => item.is_active)
+</p>
+<p>
+    <b>AddressMasterId: </b>
+    @Html.DisplayFor(modelItem => item.AddressMasterId)
+</p>
+}
+<H3>Table View</H3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StatementNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatementDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Property_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Property_City_State_Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RSO_Exemptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCEP_Exmpetions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IS_RSO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IS_SCEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RSO_Invoice_Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCEP_Invoice_Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Units)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RSO_Units_Billed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCEP_Units_Billed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddressMasterId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatementNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatementDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_City_State_Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RSO_Exemptions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCEP_Exmpetions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IS_RSO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IS_SCEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RSO_Invoice_Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCEP_Invoice_Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Units)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RSO_Units_Billed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCEP_Units_Billed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressMasterId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

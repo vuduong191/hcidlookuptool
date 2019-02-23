@@ -1,0 +1,152 @@
+﻿@model TestApp.Models.bims2
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>bims2</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StatementNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatementNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatementDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatementDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property_City_State_Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property_City_State_Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RSO_Exemptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RSO_Exemptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCEP_Exmpetions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCEP_Exmpetions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_RSO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_RSO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IS_SCEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IS_SCEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RSO_Invoice_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RSO_Invoice_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCEP_Invoice_Num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCEP_Invoice_Num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RSO_Units_Billed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RSO_Units_Billed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCEP_Units_Billed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCEP_Units_Billed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressMasterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressMasterId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
